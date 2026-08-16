@@ -438,3 +438,33 @@ footer.site-footer a{color:#ffd93d;}
   font-size:0.95rem;
 }
 .load-more-btn:hover{background:var(--purple);}
+
+/* ---------- Comparison table (guide) ---------- */
+.cmp-scroll{overflow-x:auto;}
+.cmp-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:0.9rem;
+  min-width:640px;
+}
+.cmp-table th,.cmp-table td{
+  border:1px solid #eee;
+  padding:10px 12px;
+  text-align:left;
+  vertical-align:top;
+}
+.cmp-table thead th{
+  background:linear-gradient(120deg,var(--pink),var(--orange));
+  color:#fff;
+  font-weight:800;
+  white-space:nowrap;
+}
+.cmp-table tbody tr:nth-child(even){background:#fff7ef;}
+.cmp-table a{color:var(--blue); font-weight:700;}
+@media (max-width:600px){
+  .cmp-table{min-width:0; font-size:0.85rem;}
+  .cmp-table thead{display:none;}
+  .cmp-table tr{display:block; margin-bottom:14px; border:1px solid #eee; border-radius:12px; overflow:hidden;}
+  .cmp-table td{display:flex; justify-content:space-between; gap:12px; border:none; border-bottom:1px solid #f2f2f2;}
+  .cmp-table td::before{content:attr(data-l); font-weight:800; color:var(--muted);}
+}
